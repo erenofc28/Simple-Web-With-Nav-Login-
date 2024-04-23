@@ -1,0 +1,146 @@
+import { useState } from 'react';
+import './skills.css';
+import "bootstrap";
+
+function Skill(){
+
+  const [name,setName] = useState("");
+  const [pass,setPass] = useState("");
+
+
+const check=()=>{
+    if(name=="" || pass=="")
+    {
+        alert("Please fill all the details")
+        return false;
+    }
+    else{
+        return true;
+    }
+
+}
+
+
+
+    return(
+        <>
+        <nav className='nav'> 
+        <div className="title">
+             <h1>PORTFOLIO</h1>
+        </div>
+        <div className="menu">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Skill</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+       
+        
+        </nav>
+
+
+        <div className="main">
+     <div className="name">
+        <h1>Eren Yeager</h1>
+
+     </div>
+
+     <hr />
+
+     <h3>I am a fullstack developer</h3>
+
+     <div className="image-one">
+     </div>
+
+     <div className="para-one">
+Hi,i'm eren yeager Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae debitis nisi minus hic, voluptate animi similique explicabo nobis quis ipsum consectetur, soluta adipisci quasi asperiores temporibus ad libero ratione doloremque veniam perspiciatis magni modi corrupti delectus maiores. Vel, voluptatibus maxime.
+     </div>
+
+     <div className="skills">
+
+        <h1>My skills</h1>
+        <div className="cards">
+      <div className="card-one">
+        <div className="card-one-child">
+        <div className="img-child-one">
+
+</div>
+        </div>
+        <h5>HTML</h5>
+      </div>
+    
+            
+            <div className="card-two">
+            <div className="card-two-child">
+
+                <div className="img-child-two">
+
+                </div>
+            
+            </div>
+            <h5>CSS</h5>
+
+                </div>
+                <div className="card-three">
+                <div className="card-three-child">
+                <div className="img-child-three">
+
+</div>
+            </div>
+                        <h5>JavaScript</h5>
+                </div>
+                <div className="card-four">
+                <div className="card-four-child">
+                <div className="img-child-four">
+
+</div>
+            
+            </div>
+            <h5>React Js</h5>
+                </div>
+        </div>
+     </div>
+
+    <div className="image-two">
+
+    </div>
+
+    <div className="para-two">
+        <h4>Full stack development</h4>
+
+      
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam recusandae officia nobis quibusdam fugit eum quia, beatae facere molestiae soluta error voluptatem quasi fugiat ullam dolor labore? Nam, quasi. In ab, recusandae minus delectus sed beatae debitis ut vero harum hic explicabo et architecto nam illo. Nisi nemo quia perferendis.</p>
+    
+    
+    
+    </div>
+
+
+<form action="" className='form'>
+
+    <h3>Login form</h3>
+    <label htmlFor="">username</label>
+    <input type="text" name="" id="" placeholder='Enter Your Username' onChange={(e)=>{
+setName(e.target.value)
+    }} />
+    <label htmlFor="">password</label>
+    <input type="password" name="" id="" placeholder='Enter Your Password' onChange={(e)=>{
+setPass(e.target.value)
+    }}/>
+    <button onClick={check}>Login</button>
+</form>
+
+
+        </div>
+
+        <div className="foot">
+            @copy designed by erenxgamez
+        </div>
+        
+        </>
+    )
+}
+
+export default Skill;
